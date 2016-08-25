@@ -1,0 +1,12 @@
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\RabbitMQ_Consumer.exe.config
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\RabbitMQ_Consumer.exe
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\RabbitMQ_Consumer.pdb
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\EasyNetQ.dll
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\EasyNetQHelper.dll
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\RabbitMQ.Client.dll
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\EasyNetQHelper.pdb
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\EasyNetQ.xml
+D:\MyProject\Myproject\RabbitMQ_Consumer\bin\Debug\RabbitMQ.Client.xml
+D:\MyProject\Myproject\RabbitMQ_Consumer\obj\Debug\RabbitMQ_Consumer.csprojResolveAssemblyReference.cache
+D:\MyProject\Myproject\RabbitMQ_Consumer\obj\Debug\RabbitMQ_Consumer.exe
+D:\MyProject\Myproject\RabbitMQ_Consumer\obj\Debug\RabbitMQ_Consumer.pdb

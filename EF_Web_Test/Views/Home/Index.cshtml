@@ -1,0 +1,53 @@
+﻿@using Webdiyer.WebControls.Mvc;
+@model  PagedList<Subject>
+@{
+    ViewBag.Title = "Home Page";
+    //SubjectDTO SubjectDTO = ViewBag.SubjectDTO;
+    //List<SubjectCommentDTO> list = ViewBag.SubjectCommentDTOList;
+}
+@section head {
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/pagerstyles.css" rel="stylesheet" />
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+}
+
+<fieldset><legend>查询</legend>
+    @using (Html.BeginForm("index", ViewContext.RouteData.GetRequiredString("controller"),
+                                 new { id = "" }, FormMethod.Get, new { id = "searchForm" }))
+        {
+        <span>标题：</span><input type="text" name="title" id="title" style="width:120px" />
+        <span>作者：</span><input type="text" name="author" id="author" style="width:120px" /><span>（如：Webdiyer）</span>
+        <input type="submit" value="搜索(S)" accesskey="S" />
+    }
+
+</fieldset>
+<h3>文章列表</h3>
+
+<div id="articles">
+
+    @Html.Partial("_SubjectList",Model)
+
+
+</div>
+
+@section scripts
+{
+    @{Html.RegisterMvcPagerScriptResource();}
+}

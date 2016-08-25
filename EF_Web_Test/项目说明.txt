@@ -1,0 +1,8 @@
+EF web 练习项目
+
+使用相关组件：
+1.EF6
+2.Entity Framework Extended Library （EF扩展类库，支持批量更新、删除、合并多个查询等）
+2.MiniProfiler 监控EF性能
+3.Log4Net 日志组件
+4.AutoMapper DTO映射组件

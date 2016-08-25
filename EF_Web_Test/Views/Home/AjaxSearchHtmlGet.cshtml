@@ -1,0 +1,26 @@
+﻿@using Webdiyer.WebControls.Mvc;
+@model  PagedList<Subject>
+@{
+    ViewBag.Title = "AjaxSearchHtmlGet";
+}
+@section head {
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/pagerstyles.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+}
+<fieldset><legend>查询</legend>
+@using (Ajax.BeginForm("AjaxSearchGet", new RouteValueDictionary { { "id", "" } }, new AjaxOptions { UpdateTargetId = "articles",HttpMethod = "Get",InsertionMode = InsertionMode.Replace }, new RouteValueDictionary { { "id", "searchForm" } }))
+{
+        <span>标题：</span><input type="text" name="title" id="title" style="width:120px" />
+        <span>作者：</span><input type="text" name="author" id="author" style="width:120px" /><span>（如：Webdiyer）</span>
+        <span>来源：</span><input type="text" name="source" id="source" style="width:120px" /><span>（如：吴起热线）</span>
+        <input type="submit" value="搜索(S)" accesskey="S" />
+}</fieldset>
+<div id="articles">
+    @Html.Partial("_AjaxSearchGet",Model)
+</div>
+@section Scripts
+{@{Html.RegisterMvcPagerScriptResource();}
+<script type="text/javascript" src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>}

@@ -1,0 +1,23 @@
+﻿@using Webdiyer.WebControls.Mvc;
+
+@model Webdiyer.WebControls.Mvc.PagedList<Subject>
+
+
+
+<div class="well well-sm">当前查询条件：标题：<span class="emph">@Request.QueryString["title"]</span>&nbsp;&nbsp;作者：<span class="emph">@Request.QueryString["author"]</span>&nbsp;&nbsp;来源：<span class="emph">@Request.QueryString["source"]</span></div>
+@Html.Partial("_ArticleTable", Model)
+<div><div style="float:left;width:50%">共 @Model.TotalPageCount 页 @Model.TotalItemCount 条记录，当前为第 @Model.CurrentPageIndex 页</div>
+
+@*    @Ajax.Pager(Model,
+    new PagerOptions { 
+  
+    PageIndexParameterName = "id", 
+    ContainerTagName = "ul",
+    CssClass = "pagination", 
+    CurrentPagerItemTemplate = "<li class=\"active\"><a href=\"#\">{0}</a></li>", 
+    DisabledPagerItemTemplate = "<li class=\"disabled\"><a>{0}</a></li>",
+    PagerItemTemplate = "<li>{0}</li>" }).AjaxOptions(a => a.SetUpdateTargetId("articles"))*@
+
+
+    @Ajax.Pager(Model).Options(o=>o.SetPageIndexParameterName("id").AddHtmlAttribute("style","float:right").SetPagerItemTemplate("&nbsp;{0}")).AjaxOptions(a=>a.SetUpdateTargetId("articles").SetDataFormId("searchForm"))
+</div>
