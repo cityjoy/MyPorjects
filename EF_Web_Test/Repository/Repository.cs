@@ -23,6 +23,8 @@ namespace EF_Web_Test.Repository
             this.context = context;
         }
 
+        public EFDBContext Context { get { return context; } }
+
         /// <summary>
         /// 实体集合
         /// </summary>

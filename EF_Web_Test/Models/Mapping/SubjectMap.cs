@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using EF_Web_Test.Models.Entity;
 
 namespace EF_Web_Test.Models.Mapping
 {
@@ -9,7 +10,6 @@ namespace EF_Web_Test.Models.Mapping
         {
             // Primary Key
             this.HasKey(t => t.SubjectId);
-
             // Properties
             this.Property(t => t.SubjectId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
@@ -29,7 +29,9 @@ namespace EF_Web_Test.Models.Mapping
             this.Property(t => t.Author)
                 .IsRequired()
                 .HasMaxLength(50);
-
+            this.Property(t => t.Publish)
+                            .IsRequired()
+                            .HasMaxLength(50);
            
             // Table & Column Mappings
             this.ToTable("Subject");
@@ -39,6 +41,7 @@ namespace EF_Web_Test.Models.Mapping
             this.Property(t => t.Content).HasColumnName("Content");
             this.Property(t => t.CreateTime).HasColumnName("CreateTime");
             this.Property(t => t.Author).HasColumnName("Author");
+            this.Property(t => t.Publish).HasColumnName("Publish");
         }
     }
 }

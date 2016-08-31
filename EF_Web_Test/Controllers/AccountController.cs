@@ -11,6 +11,7 @@ using WebMatrix.WebData;
 using EF_Web_Test.Filters;
 using EF_Web_Test.Models;
 using EF_Web_Test.Repository;
+using EF_Web_Test.Models.Entity;
 
 namespace EF_Web_Test.Controllers
 {

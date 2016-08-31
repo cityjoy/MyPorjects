@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace EF_Web_Test.Models
+namespace EF_Web_Test.Models.Entity
 {
     public partial class Subject
     {
@@ -15,6 +15,8 @@ namespace EF_Web_Test.Models
         public string Content { get; set; }
         [Required]
         public string Author { get; set; }
+        [Required]
+        public string Publish { get; set; }
         public DateTime CreateTime { get; set; }
         public virtual ICollection<SubjectComment> CommentList { get; set; } 
     }

@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
+using EF_Web_Test.Models.Entity;
 
 namespace EF_Web_Test.Models.Mapping
 {

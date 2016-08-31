@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EF_Web_Test.Models
+namespace EF_Web_Test.Models.Entity
 {
     public partial class SubjectComment
     {

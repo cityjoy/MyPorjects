@@ -118,3 +118,5 @@ D:\MyProject\Myproject\EF_Web_Test\obj\Debug\EF_Web_Test.pdb
 D:\MyProject\Myproject\EF_Web_Test\obj\Debug\EF_Web_Test.csprojResolveAssemblyReference.cache
 D:\MyProject\Myproject\EF_Web_Test\bin\EntityFramework.Extended.dll
 D:\MyProject\Myproject\EF_Web_Test\bin\EntityFramework.Extended.xml
+D:\MyProject\Myproject\EF_Web_Test\obj\Debug\EF_Web_Test.Migrations.InitialCreate.resources
+D:\MyProject\Myproject\EF_Web_Test\obj\Debug\EF_Web_Test.csproj.GenerateResource.Cache

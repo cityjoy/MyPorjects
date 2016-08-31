@@ -45,6 +45,13 @@
             @Html.EditorFor(model => model.Author)
             @Html.ValidationMessageFor(model => model.Author)
         </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Publish)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Publish)
+            @Html.ValidationMessageFor(model => model.Publish)
+        </div>
 
         <p>
             <input type="submit" value="Create" />

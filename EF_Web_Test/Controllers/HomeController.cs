@@ -9,6 +9,11 @@ using System.Web;
 using System.Web.Mvc;
 using EF_Web_Test.Log4net;
 using Webdiyer.WebControls.Mvc;
+using System.Transactions;
+using System.Data.Common;
+using System.Data.SqlClient;
+using EF_Web_Test.Filters;
+using EF_Web_Test.Models.Entity;
 
 namespace EF_Web_Test.Controllers
 {
@@ -56,10 +61,11 @@ namespace EF_Web_Test.Controllers
             //LogHelper.WriteError("123");
             return View(model);
         }
-
+        [CheckActionLoginAttribute]
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
+
 
             return View();
         }
@@ -108,6 +114,8 @@ namespace EF_Web_Test.Controllers
             {
                 entity.CreateTime = DateTime.Now;
                 subjectRepository.Add(entity);
+                var entry=subjectRepository.Context.Entry<Subject>(entity);
+                var state = entry.State.ToString();
                 unitOfWork.Commit();
             }
                 return View(entity);

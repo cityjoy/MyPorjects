@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
 
-namespace EF_Web_Test.Models
+namespace EF_Web_Test.Models.Entity
 {
 
 
